@@ -1,5 +1,4 @@
 import pandas as pd
-import seaborn as sns
 import pickle
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity, cosine_distances
