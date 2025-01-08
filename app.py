@@ -1,11 +1,14 @@
-# Membuat file Streamlit
 import streamlit as st
-import pickle
-import seaborn as sns
-import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
-from sklearn.metrics.pairwise import cosine_similarity
+import pickle
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity, cosine_distances
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Instalasi Seaborn (jika diperlukan)
+# !pip install seaborn
 
 # Load model dan data
 with open('laptop_recommender.pkl', 'rb') as f:
@@ -49,8 +52,3 @@ if product_name:
     sns.heatmap(similarity_df, cmap='coolwarm', xticklabels=False, yticklabels=False)
     plt.title('Heatmap Matriks Kemiripan')
     st.pyplot(plt)
-
-# Menjalankan Streamlit dengan ngrok
-from pyngrok import ngrok
-public_url = ngrok.connect(port='8501')
-print(f"Streamlit App tersedia di: {public_url}")
