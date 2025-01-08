@@ -1,5 +1,3 @@
-!pip install pyngrok streamlit
-
 # Membuat file Streamlit
 %%writefile app.py
 import streamlit as st
