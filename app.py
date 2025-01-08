@@ -1,5 +1,4 @@
 # Membuat file Streamlit
-%%writefile app.py
 import streamlit as st
 import pickle
 import seaborn as sns
@@ -55,5 +54,3 @@ if product_name:
 from pyngrok import ngrok
 public_url = ngrok.connect(port='8501')
 print(f"Streamlit App tersedia di: {public_url}")
-
-!streamlit run app.py &>/dev/null &
