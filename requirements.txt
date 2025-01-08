@@ -1,5 +1,5 @@
 streamlit
-pandas
-numpy
-seaborn
-scikit-learn
+pandas==1.5.3  # Sesuaikan dengan versi yang digunakan
+numpy==1.24.3  # Sesuaikan dengan versi yang digunakan
+seaborn==0.12.1 # Sesuaikan dengan versi yang digunakan
+scikit-learn==1.2.3
