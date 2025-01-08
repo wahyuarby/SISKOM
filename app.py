@@ -1,11 +1,14 @@
-pip install seaborn matplotlib pandas numpy scikit-learn streamlit
-import streamlit as st
-import pickle
-import seaborn as sns
-import matplotlib.pyplot as plt
+!pip install seaborn matplotlib pandas numpy scikit-learn streamlit
 import pandas as pd
-import numpy as np
-from sklearn.metrics.pairwise import cosine_similarity
+import matplotlib.pyplot as plt
+import seaborn as sns
+import pickle
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity, cosine_distances
+import seaborn as sns
+import pickle
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity, cosine_distances
 
 # Load model dan data
 with open('laptop_recommender.pkl', 'rb') as f:
